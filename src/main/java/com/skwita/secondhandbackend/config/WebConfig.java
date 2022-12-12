@@ -43,6 +43,69 @@ public class WebConfig implements WebMvcConfigurer{
                                  Season.SUMMER, 
                                  "silk")
             );
+            clothingService.addClothing(
+                    new Clothing(Category.SWEATER, 
+                                 State.NEW,
+                                 "Hi There", 
+                                 3000, 
+                                 "Green", 
+                                 Season.WINTER, 
+                                 "wool")
+            );
+            clothingService.addClothing(
+                    new Clothing(Category.PANTS, 
+                                 State.USED,
+                                 "H&M", 
+                                 1000, 
+                                 "Blue", 
+                                 Season.SUMMER, 
+                                 "jeans")
+            );
+            clothingService.addClothing(
+                    new Clothing(Category.DRESS, 
+                                 State.NEW,
+                                 "Nike", 
+                                 1000, 
+                                 "Red", 
+                                 Season.SUMMER, 
+                                 "silk")
+            );
+            clothingService.addClothing(
+                    new Clothing(Category.PANTS, 
+                                 State.NEW,
+                                 "Adidas", 
+                                 2000, 
+                                 "Blue", 
+                                 Season.SUMMER, 
+                                 "silk")
+            );
+            clothingService.addClothing(
+                    new Clothing(Category.SWEATER, 
+                                 State.NEW,
+                                 "Hi There", 
+                                 3000, 
+                                 "Green", 
+                                 Season.WINTER, 
+                                 "wool")
+            );
+            clothingService.addClothing(
+                    new Clothing(Category.PANTS, 
+                                 State.USED,
+                                 "H&M", 
+                                 1000, 
+                                 "Blue", 
+                                 Season.SUMMER, 
+                                 "jeans")
+            );
+            clothingService.addClothing(
+                    new Clothing(Category.PANTS, 
+                                 State.USED,
+                                 "H&M", 
+                                 1000, 
+                                 "Blue", 
+                                 Season.SUMMER, 
+                                 "jeans")
+            );
         }
         return null;
     }

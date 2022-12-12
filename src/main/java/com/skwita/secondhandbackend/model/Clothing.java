@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,28 +14,40 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class Clothing {
+
+    public Clothing(Category category,
+                    State state,
+                    String brand,
+                    float price,
+                    String color,
+                    Season season,
+                    String material) {
+                        this.category = category;
+                        this.state = state;
+                        this.brand = brand;
+                        this.price = price;
+                        this.color = color;
+                        this.season = season;
+                        this.material = material;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
-    @NotBlank(message = "Category is mandatory")
     private Category category;
-    
-    @NotBlank(message = "State is mandatory")
+
     private State state;
 
-    @NotBlank(message = "Brand is mandatory")
     private String brand;
 
     private float price;
 
-    @NotBlank(message = "Color is mandatory")
     private String color;
 
-    @NotBlank(message = "Season is mandatory")
     private Season season;
 
-    @NotBlank(message = "Material is mandatory")
     private String material;
 }
